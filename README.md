@@ -13,6 +13,10 @@ All possible scripts
 - Обновление ssl с помощью certbot
 - Сервер на которым обновляем ssl с внешним ip
 ---
-**file - copy_remote_backup_file**
+**file - copy_remote_backup_file.sh**
 - Поиск файлов по дням изменения
 - Копирование данных файлов
+---
+**file - rename_weekly.sh**
+- Перекладывание (mv) нужных файлов из одного каталога в другой 
+---
