@@ -1,0 +1,31 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:	  glassfish
+# Required-Start:    $local_fs $remote_fs $network $syslog $named
+# Required-Stop:     $local_fs $remote_fs $network $syslog $named
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: starts the glassfish web server
+# Description:       starts glassfish using start-stop-daemon
+### END INIT INFO
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+USER=glassfish
+
+case "$1" in
+ [sS][tT][aA][rR][tT])
+  su $USER -c '/opt/glassfish4/bin/asadmin start-domain'
+  ;;
+ [sS][tT][oO][pP])
+  su $USER -c '/opt/glassfish4/bin/asadmin stop-domain'
+  ;;
+ [rR][eE][sS][tT][aA][rR][tT])
+  $0 stop
+  sleep 2
+  $0 start
+  ;;
+ *)
+  echo "Usage: $0 start|stop|restart"
+esac

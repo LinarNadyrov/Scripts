@@ -20,3 +20,7 @@ All possible scripts
 **file - rename_weekly.sh**
 - Перекладывание (mv) нужных файлов из одного каталога в другой 
 ---
+**file - glassfish**
+- Для запуска glassfish версии 4.1.1  (build 1)
+- Данный файл подкладывается в /etc/init.d/glassfish 
+--- 
