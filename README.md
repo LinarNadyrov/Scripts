@@ -24,3 +24,13 @@ All possible scripts
 - Для запуска glassfish версии 4.1.1  (build 1)
 - Данный файл подкладывается в /etc/init.d/glassfish 
 --- 
+**file - do_320_backup.sh**
+- Остановка lxc 320 
+- Бэкап
+---
+**file - mv_weekly.py**
+- Перенос нужных файлов с одной на другую директорию
+---
+
+
+
