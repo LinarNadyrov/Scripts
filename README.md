@@ -34,5 +34,9 @@ All possible scripts
 **folder - windows**
 - net_stop/start.bat - устраняет проблему с WmiPrvSE.exe | Выкл/Вкл службу "Инструментарий управления Windows"
 - reboot.bat
+---
+**file - clear_crm.sh**
+- обезличивание БД 
+---
 
 
