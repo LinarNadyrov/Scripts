@@ -31,7 +31,7 @@ All possible scripts
 **file - mv_weekly.py**
 - Перенос нужных файлов с одной на другую директорию
 ---
-**folder - nginx_bin**
+**folder - windows**
 - net_stop/start.bat - устраняет проблему с WmiPrvSE.exe | Выкл/Вкл службу "Инструментарий управления Windows"
 - reboot.bat
 
