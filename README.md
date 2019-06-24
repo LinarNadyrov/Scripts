@@ -38,5 +38,8 @@ All possible scripts
 **file - clear_crm.sh**
 - обезличивание БД 
 ---
+**file - mv_weekly_backup.py**
+- Поиск самого "старшего" файла и его перенос на другую директорию
+---
 
 
