@@ -1,0 +1,24 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+
+mknod -m 666 /dev/fuse c 10 229
+
+route add -net 172.16.202.0/24 gw 10.1.11.66 &
+
+mount /mnt/esb/ &
+mount /mnt/crm.domain.upload &
+
+/opt/dwh/mount.sh
+
+exit 0
