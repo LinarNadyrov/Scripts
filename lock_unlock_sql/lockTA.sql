@@ -1,1 +1,1 @@
-alter user ta with nologin;
+alter user "user name" with nologin;

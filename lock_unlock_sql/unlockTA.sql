@@ -1,1 +1,1 @@
-alter user ta with login;
+alter user "user name" with login;
