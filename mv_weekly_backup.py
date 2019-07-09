@@ -1,9 +1,10 @@
+#!/usr/bin/python3
+
 # coding: utf-8 
 
 import os
 import datetime
 import shutil
-import re
 import time
 import os.path
 import glob
@@ -39,6 +40,15 @@ def get_oldest_file(files, _invert=False):
 
 def get_youngest_file(files):
     return get_oldest_file(files, _invert=True)
+
+try:
+    pass #get_youngest_file(files) = None
+        #shutil.move(get_youngest_file(files), dst_path1)
+except TypeError:
+    print('Good')
+except Exception:
+    print( "Общее исключение")
+
 
 # Указываем файлы которые нужно переносить 
 list = ["205","230","232","307","323","327","329","524","528","531"]

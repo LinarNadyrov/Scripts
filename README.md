@@ -41,10 +41,14 @@ All possible scripts
 **file - mv_weekly_backup.py**
 - Поиск самого "старшего" файла и его перенос на другую директорию
 ---
-**mount_in_kette**
+**folder - mount_in_kette**
 - файл '/etc/rc.local' rc.local
 - скрипт монтирования mount.sh 
 - работает на Ubuntu 16.04.6 LTS 
+----
+**folder - lock_unlock_sql**
+- lock.sql/unlock.sql - Блокировка/Разблокировка прикладных УЗ
+- lockTA.sql/unlockTA.sql - Блокировка/Разблокировка отделенную УЗ
 ----
 
 
