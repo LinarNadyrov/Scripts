@@ -50,5 +50,10 @@ All possible scripts
 - lock.sql/unlock.sql - Блокировка/Разблокировка прикладных УЗ
 - lockTA.sql/unlockTA.sql - Блокировка/Разблокировка отделенную УЗ
 ----
+**file - search_mail.py**
+- подключение к почтовому аккаунту по прокотолу IMAP
+- поиск последнего письма по параметрам:
+(from_address = '(FROM "info@itbegin.ru") 
+(subject_head = '(SUBJECT "Help Desk")') 
 
 
