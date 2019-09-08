@@ -52,7 +52,7 @@ All possible scripts
 ----
 **file - search_mail.py**
 - подключение к почтовому аккаунту по прокотолу IMAP
-- поиск последнего письма по параметрам:
+- поиск последнего письма по параметрам: \
 (from_address = '(FROM "info@itbegin.ru") 
 (subject_head = '(SUBJECT "Help Desk")') 
 
