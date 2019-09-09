@@ -55,5 +55,11 @@ All possible scripts
 - поиск последнего письма по параметрам: \
 (from_address = '(FROM "info@itbegin.ru")' \
 (subject_head = '(SUBJECT "Help Desk")'
+----
+**file - do_306_backup.sh**
+- Остановка lxc 306
+- Бэкап
+----
+
 
 
