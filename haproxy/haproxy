@@ -1,0 +1,4 @@
+MAILTO=l.nadyrov@vip-connect.ru
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/5 * * * *   root    /etc/haproxy/check_make_haproxy.pl
