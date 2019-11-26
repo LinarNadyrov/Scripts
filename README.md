@@ -13,20 +13,12 @@ All possible scripts
 - Обновление ssl с помощью certbot
 - Сервер на которым обновляем ssl с внешним ip
 ---
-**file - copy_remote_backup_file.sh**
-- Поиск файлов по дням изменения
-- Копирование данных файлов
----
 **file - rename_weekly.sh**
 - Перекладывание (mv) нужных файлов из одного каталога в другой 
 ---
 **file - glassfish**
 - Для запуска glassfish версии 4.1.1  (build 1)
 - Данный файл подкладывается в /etc/init.d/glassfish 
---- 
-**file - do_320_backup.sh**
-- Остановка lxc 320 
-- Бэкап
 ---
 **file - mv_weekly.py**
 - Перенос нужных файлов с одной на другую директорию
@@ -56,10 +48,6 @@ All possible scripts
 (from_address = '(FROM "info@itbegin.ru")' \
 (subject_head = '(SUBJECT "Help Desk")'
 ----
-**file - do_306_backup.sh**
-- Остановка lxc 306
-- Бэкап
-----
 **folder - haproxy**
 Основная суть:
 - Балансировщик опрашивает backend с помощью zabbix-get и на основе нагруженности (CPU Load Average) распределяет подключения 
@@ -71,6 +59,12 @@ All possible scripts
     template создает конфиг файл haproxy.cfg
 - haproxy - cron файл 
 ----
-
+**folder - backup**
+ - file - do_306_backup.sh - Остановка lxc 306 & Бэкап
+ - file - do_320_backup.sh - Остановка lxc 320 & Бэкап
+ - file - copy_remote_backup_file.sh - Поиск файлов по дням изменения & Копирование данных файлов
+ - file - copyp11p1 - Модифицированный & Поиск файлов по дням изменения & Копирование данных файлов
+ ----
+ 
 
 
