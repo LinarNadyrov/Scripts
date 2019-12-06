@@ -59,6 +59,9 @@ All possible scripts
  - file - mv_weekly_backup.py - Поиск самого "старшего" файла и его перенос на другую директорию
  - file - mv_weekly.py - Перенос нужных файлов с одной на другую директорию
  ----
-
+**folder - telegram**
+ - file - telegram.sh - скрипт для отпраки сообщений из zabbix. 
+ Протестирован на Zabbix server 4.0.4
+ Скрипт помещается /usr/lib/zabbix/alertscripts/
 
 
