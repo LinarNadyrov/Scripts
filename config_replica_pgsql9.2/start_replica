@@ -1,0 +1,19 @@
+service postgresql stop
+
+cd /var/lib/postgresql/9.2/ || exit 1
+rm -rf main/*
+
+PGUSER=             # user for replication 
+PGPASSWORD=         # password from user 
+
+pg_basebackup -P -X stream -c fast -h IP_ADDR_MASTER_REPLICATION -p PORT_MASTER_REPLICATION -U USER_FROM_REPLICATION -D /var/lib/postgresql/9.2/main
+
+mv /var/lib/postgresql/9.2/main/recovery.conf /var/lib/postgresql/9.2/main/0.recovery.conf
+cp -p /root/replica/recovery.conf /var/lib/postgresql/9.2/main/
+cp -p /root/replica/postgresql.conf /etc/postgresql/9.2/main/
+#cp -p /root/replica/pg_hba.conf /etc/postgresql/9.2/main/
+
+chown -R postgres:postgres /var/lib/postgresql/9.2/
+chown -R postgres:postgres /etc/postgresql/9.2/
+
+#service postgresql restart

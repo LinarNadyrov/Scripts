@@ -64,5 +64,6 @@ All possible scripts
     Протестирован на Zabbix server 4.0.4 \
     Скрипт помещается /usr/lib/zabbix/alertscripts/ 
 ----
-
+**folder - config_replica_pgsql9.2**
+ - Конфиг файлы настройки репликации для PostgreSQL 9.2
 
