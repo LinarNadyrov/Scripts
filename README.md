@@ -66,4 +66,4 @@ All possible scripts
 ----
 **folder - config_replica_pgsql9.2**
  - Конфиг файлы настройки репликации для PostgreSQL 9.2
-
+ ----
