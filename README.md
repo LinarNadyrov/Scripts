@@ -66,11 +66,7 @@ All possible scripts
 ----
 **folder - config_replica_pgsql9.2**
  - Конфиг файлы настройки репликации для PostgreSQL 9.2
-<<<<<<< HEAD
- ----
-=======
 ----
 **file - clear_data_in_cloud.sh**
 - удаление файлов и папок в домашнем каталоге УЗ 
 ---
->>>>>>> ddfb278056dcb548db5377b31edb359b675e96df
