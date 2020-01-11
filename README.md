@@ -70,6 +70,9 @@ All possible scripts
 **file - clear_data_in_cloud.sh**
 - удаление файлов и папок в домашнем каталоге УЗ 
 ---
+<<<<<<< HEAD
 **folder - config_replica_pgsql10.5**
  - Конфиг файлы настройки репликации для PostgreSQL 10.5
 ---
+=======
+>>>>>>> de95eaa8dc3a268c5cec84275d7c60dc290c2a8b
