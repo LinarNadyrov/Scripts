@@ -1,6 +1,4 @@
 # Scripts
-All possible scripts
----
 **file - get_cert_nginx.sh**
 - Обновление ssl с помощью certbot
 - Сервер на которым обновляем ssl НЕ ИМЕЕТ внешнего ip
@@ -73,4 +71,5 @@ All possible scripts
 **folder - config_replica_pgsql10.5**
  - Конфиг файлы настройки репликации для PostgreSQL 10.5
 ---
-
+**folder - for_artifactory**
+ - Поиск и удаление определенных данных
