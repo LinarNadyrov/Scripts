@@ -26,4 +26,5 @@ python3 search_snapshot_alternative.py
 
 2. подумать как лучше параметризировать ARTIFACTORY_BASE_URL, ARTIFACTORY_COMMAND_URL, ARTIFACTORY_COMMAND_DIRECTORY_URL 
 
-Возможно даже запрашивать при запуске 
+Возможно даже запрашивать при запуске
+
