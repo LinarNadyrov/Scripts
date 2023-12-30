@@ -73,6 +73,10 @@
 ---
 **folder - for_artifactory**
  - Поиск и удаление определенных данных
-
+---
 **folder - check_ldap_and_keepalived**
  - Проверка порта на доступность и выполнение определенных действий
+---
+**folder - python_adapter_redis**
+ - Redis адаптер на Python
+---
