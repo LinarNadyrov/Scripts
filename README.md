@@ -80,3 +80,6 @@
 **folder - python_adapter_redis**
  - Redis адаптер на Python
 ---
+**folder - python_redis_caching**
+ - Кеширование данных с помощью Redis
+---
