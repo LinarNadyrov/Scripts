@@ -21,14 +21,6 @@ redis_client.set(one_key,PATH_SCRIPTS)
 # При запуске принимаем в качестве аргумента путь к файлу
 text_file = sys.argv[1]
 
-# Создаем файл и записываем/перезаписываем в него данные
-text_data = [ '1string', '2string', '3string', '4string', '5string', '6string', '7string', '8string', '9string', '10string', '11string', '12string', '13string', '14string', '15string']
-#text_file = '/tmp/log_file_task5.log'
-
-with open(text_file, 'w', encoding='utf-8') as file:
-    for line in text_data:
-        file.write(line + '\n')
-
 # Определяем количество байтов в файле
 def all_bytes_from_file(FILE, NUMBER_BYTE):
     # https://openwritings.net/pg/python/python-read-file-one-byte-time
