@@ -6,21 +6,20 @@ import redis
 from os.path import abspath
 from datetime import datetime
 import argparse
+import sys
 
-# запуск - python3 python_work5.py -file /tmp/log_file_task5.log
+# запуск - python3 /home/user/python_work5.py /tmp/log_file_task5.log
 
-# При запуске принимаем в качестве аргумента путь к файлу 
-parser = argparse.ArgumentParser(description="command line options",formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('-file ', '--file_location', help="Source location")
-args = parser.parse_args()
-args_data = vars(args)
+redis_client = redis.Redis(host = '127.0.0.1', port = 6379)
 
-# Новый список
-list_path = []
-# Словарь забираем в список
-for key, value in args_data.items():
-    list_path.append(value)
-text_file = list_path[0]
+# Ключ cmd-fcat должен содержать команду для запуска вашей программы 
+PATH_SCRIPTS = abspath(__file__)
+one_key = 'cmd-fcat'
+redis_client.set(one_key,PATH_SCRIPTS)
+#print('result for ', one_key, '= ', redis_client.get(one_key))
+
+# При запуске принимаем в качестве аргумента путь к файлу
+text_file = sys.argv[1]
 
 # Создаем файл и записываем/перезаписываем в него данные
 text_data = [ '1string', '2string', '3string', '4string', '5string', '6string', '7string', '8string', '9string', '10string', '11string', '12string', '13string', '14string', '15string']
@@ -56,7 +55,6 @@ from_this_byte = 100                          # Последние N байт ф
 
 # Подключение к redis и проверка существование запрашиваемого ключа
 # Скрипт читает файл только один раз, сколько бы не было вызовов с одинаковым аргументом.
-redis_client = redis.Redis(host = '127.0.0.1', port = 6379)
 
 # Если нет нужного ключа в Redis
 if redis_client.exists(text_file) == 0:
@@ -88,9 +86,3 @@ elif redis_client.exists(text_file) == 1:
     end_time = datetime.now()  # время окончания выполнения
     execution_time = end_time - start_time  # вычисляем время выполнения
     print(f'Program execution time: {execution_time} seconds')
-
-# Ключ cmd-fcat должен содержать команду для запуска вашей программы 
-PATH_SCRIPTS = abspath(__file__)
-one_key = 'cmd-fcat'
-redis_client.set(one_key,PATH_SCRIPTS)
-#print('result for ', one_key, '= ', redis_client.get(one_key))
