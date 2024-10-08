@@ -83,3 +83,6 @@
 **folder - python_redis_caching**
  - Кеширование данных с помощью Redis
 ---
+**folder - python_redis_list**
+ - Работа со списками в Redis
+---
