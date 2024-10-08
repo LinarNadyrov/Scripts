@@ -6,7 +6,7 @@ from os.path import abspath
 import sys
 
 # Номер ограничения
-limiter = 21
+limiter = 20
 # Подключение к Redis
 redis_client = redis.Redis(host = '127.0.0.1', port = 6379)
 
@@ -16,8 +16,8 @@ one_key = 'cmd-lenq'
 redis_client.set(one_key,PATH_SCRIPTS)
 #print('result for ', one_key, '= ', redis_client.get(one_key))
 
-#key = 'cmd-home-work6-1'
-key = input("Введите пож-та значение $key: ")
+# Принимаем в качестве первого аргумента значение $key
+key = sys.argv[1]
 for line in sys.stdin:
     if line.strip('\n') == "exit":
         break
@@ -27,6 +27,6 @@ for line in sys.stdin:
         # Содержимое списка должно быть ограничено 20 наиболее "свежими" элементами
         # Проверяем длину списка и соблюдаем ограничение в 20 наиболее "свежих" элементов
         # Вытесняем самый старый элемент, т.е первый
-        if redis_client.llen(key) == limiter:
-            #print("Достигли 20")
-            redis_client.lpop(key,1)
+        redis_client.ltrim(key, -limiter, -1)
+
+# запуск - python3 /home/user/python_work6-1.py 61

@@ -13,15 +13,12 @@ one_key = 'cmd-ldeq'
 redis_client.set(one_key,PATH_SCRIPTS)
 #print('result for ', one_key, '= ', redis_client.get(one_key))
 
-#key = 'cmd-home-work6-2'
-key = input("Введите первый аргумент значение $key: ")
-limit = int(input("Введите второй аргумент значение $limit: "))
-element = limit + 1
-
-# Заполняем список данными
-for i in range(element):
-    #print(i, end=";")
-    redis_client.rpush(key,i)
+# Принимаем в качестве первого аргумента значение $key
+key = sys.argv[1]
+# Принимаем в качестве второго аргумента значение $limit
+limit = sys.argv[2]
 
 # Извлекаем $limit элементов из начала списка в ключе $key и выводим их в stdout
-sys.stdout.write(str(redis_client.lrange(key,0, limit)))
+sys.stdout.write(str(redis_client.lpop(key, limit)))
+
+# запуск - python3 /home/user/python_work6-2.py 61 5
