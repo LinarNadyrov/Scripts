@@ -86,3 +86,7 @@
 **folder - python_redis_list**
  - Работа со списками в Redis
 ---
+---
+**folder - python_redis_transaction**
+ - Работа с транзакциями (transaction) и pipeline в Redis
+---
