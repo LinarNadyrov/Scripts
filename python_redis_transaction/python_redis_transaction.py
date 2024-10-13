@@ -16,11 +16,13 @@ number = int(sys.argv[2])
 def transaction(key,number):
     # Запуск конвейера (pipeline)
     pipe = redis_client.pipeline()
+    # Отслеживание указанного ключа в транзакции конвейера
+    pipe.watch(key)
     # Очередь команд внутри транзакции
     pipe.multi()
     # Увеличение значения хранящееся в ключе на указанное число
     pipe.set(key, int(redis_client.get(key).decode("utf-8")) + number)
-    # Выполнение транзакции
+    # Выполнение конвейера
     pipe.execute()
 
 # Проверяем существуют ли нужный наш ключ $key
