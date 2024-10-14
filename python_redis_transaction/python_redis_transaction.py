@@ -18,10 +18,12 @@ def transaction(key,number):
     pipe = redis_client.pipeline()
     # Отслеживание указанного ключа в транзакции конвейера
     pipe.watch(key)
+    # Получение текущего значения в ключе $key
+    key_value = int(redis_client.get(key).decode("utf-8"))
     # Очередь команд внутри транзакции
     pipe.multi()
     # Увеличение значения хранящееся в ключе на указанное число
-    pipe.set(key, int(redis_client.get(key).decode("utf-8")) + number)
+    pipe.set(key, key_value + number)
     # Выполнение конвейера
     pipe.execute()
 
