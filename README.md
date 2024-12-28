@@ -90,3 +90,7 @@
 **folder - python_redis_transaction**
  - Работа с транзакциями (transaction) и pipeline в Redis
 ---
+---
+**folder - python_redis_pipeline**
+ - Работа с pipeline в Redis
+---
