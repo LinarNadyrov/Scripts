@@ -94,3 +94,9 @@
 **folder - python_redis_pipeline**
  - Работа с pipeline в Redis
 ---
+**folder - python_redis_brpop**
+ - Работа с блокирующими режима команд в Redis
+---
+**folder - python_publish_subscribe**
+ - Работа c подсистемами, реализующая абстракцию для отправки и получения уведомлений в Redis
+---
